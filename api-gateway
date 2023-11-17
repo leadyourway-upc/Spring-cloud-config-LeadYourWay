@@ -1,0 +1,31 @@
+server:
+  port: 8080
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: bike-service
+          uri: lb://BIKE-SERVICE
+          predicates:
+            - Path=/api/v1/bikes/**
+
+        - id: rental-service
+          uri: lb://RENTAL-SERVICE
+          predicates:
+            - Path=/api/v1/rentals/**
+
+        - id: user-service
+          uri: lb://USER-SERVICE
+          predicates:
+            - Path=/api/v1/users/**
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka
