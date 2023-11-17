@@ -1,4 +1,4 @@
-erver:
+server:
   error:
     include-stacktrace: never
   port: ${PORT:${SERVER_PORT:0}}
