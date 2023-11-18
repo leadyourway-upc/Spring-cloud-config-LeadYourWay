@@ -1,13 +1,13 @@
 server:
   error:
     include-stacktrace: never
-  port: ${PORT:${SERVER_PORT:0}}
+  port: 8084
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    username: root
-    password: 12345678
-    url: jdbc:mysql://localhost:3306/leadyourwaydb
+    username: leadyourway
+    password: kD#2lP9@vZsWu6R
+    url: jdbc:mysql://leadyourway-mysql.mysql.database.azure.com/leadyourwaydb
   jpa:
     hibernate:
       ddl-auto: update
