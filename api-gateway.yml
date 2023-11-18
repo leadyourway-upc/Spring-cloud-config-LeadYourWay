@@ -23,9 +23,9 @@ spring:
             - Path=/api/v1/users/**
 eureka:
   instance:
-    hostname: service-registry
+    prefer-ip-address: true
   client:
     fetch-registry: true
     register-with-eureka: true
     service-url:
-      defaultZone: http://${eureka.instance.hostname}:8761/eureka
+      defaultZone: http://service-registry:8761/eureka
