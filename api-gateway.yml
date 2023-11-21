@@ -23,7 +23,7 @@ spring:
             - Path=/api/v1/users/**
 eureka:
   instance:
-    prefer-ip-address: true
+    hostname: localhost
   client:
     fetch-registry: true
     register-with-eureka: true
