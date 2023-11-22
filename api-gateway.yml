@@ -17,6 +17,11 @@ spring:
           predicates:
             - Path=/api/v1/rentals/**
 
+        - id: payment-service
+          uri: lb://PAYMENT-SERVICE
+          predicates:
+            - Path=/api/v1/payments/**
+
         - id: user-service
           uri: lb://USER-SERVICE
           predicates:
